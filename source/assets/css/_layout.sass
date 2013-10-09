@@ -1,0 +1,270 @@
+
+
+/* ---- global -------------------------------------------
+
+
+body
+  @include fontDefaultRegular
+  font-size: $fontSizeBase
+  background: $colorBgDefault
+
+a
+  outline: none
+  color: $colorFontDefault
+  text-decoration: underline
+  &:active
+    outline: none
+  &:focus
+    -moz-outline-style: none
+  &:hover
+    color: $colorFontGrey
+
+//\:-moz-any-link:focus
+  outline: none
+
+
+h1, h2, h3, h4
+  @include fontSpecialRegular
+
+input, button
+  @include roundedBox($cornerRaduis)
+  box-shadow: none
+  height: 34px
+  padding: 0 10px
+  border: none
+  
+
+
+
+/* ---- layout -------------------------------------------  
+
+
+/* ---- header
+
+header
+  background: $urlBgImgLight
+
+  #topbar
+    width: 100%
+    height: 40px
+    background: $colorBgLight
+    border-bottom: 1px solid $colorBorder
+
+    .sitenavi
+      float: left
+      margin: 0
+      padding: 0
+      text-align: center
+
+      li
+        float: left
+        list-style-type: none
+        margin: 0 20px
+        padding-top: 5px
+        min-height: 40px
+        @include fontSpecialRegular
+        font-size: $fontSizeTitle
+        
+        &:hover
+          border-bottom: 3px solid $colorBgDark
+
+          &.spriteowl
+            border-color: $colorSpriteowlLight
+            a
+              color: $colorSpriteowlLight
+              
+          &.cssowl
+            border-color: $colorCssowlLight
+            a
+              color: $colorCssowlLight
+
+        &.active
+          border-bottom: 3px solid $colorBgDark
+
+        a
+          color: $colorFontDefault
+          text-decoration: none
+
+          > .home
+            @include sprite-icon-home-replace-inline()
+
+    .madeby
+      color: $colorFontGrey
+      padding-top: 6px
+      line-height: 25px
+      float: right 
+
+      > .wjds
+        margin-left: 5px
+        @include sprite-graphic-wjds-replace-inline(-5px)
+        
+  #cinema
+    height: 380px
+    width: 100%
+    text-align: center
+    background: url('/assets/img/cinema/bghome.png') top center no-repeat $colorBgDark
+
+    .subtitle
+      margin-top: 50px
+      margin-bottom: 10px
+      @include fontSpecialRegular
+      font-size: $fontSizeBig
+      color: $colorFontWhite
+    
+    .title
+      margin-top: 0
+      font-size: $fontSizeSuperBig
+      color: $colorFontWhite
+      
+#main
+  position: relative
+  background: $urlBgImgLight
+  
+  .section
+    
+    &.bgdark
+      background: $urlBgImgDark
+      
+    &.products
+      min-height: 600px
+      
+      .product
+        position: absolute
+        top: -130px
+        padding: 0
+        @include fontSpecialRegular
+        @include roundedBox($cornerRaduis)
+        
+        &.spriteowl
+          background: url('/assets/img/content/bgspriteowl.jpg') top center no-repeat $colorBgLight
+          background-size: 100% 295px
+          > .head
+            @include sprite-logo-spriteowl-after-absolute-inside(bottom, center, -4px, 0)
+          > .badge
+            color: $colorFontSpriteowl
+          > .price
+            background: $colorSpriteowlLight
+          > .features
+            > .check
+              @include sprite-icon-checkSprite-before-absolute-outside(top,left, -7px, 20px)
+          > .btnarea
+            > .btn
+              @include backgroundGradient($colorSpriteowlLight, $colorSpriteowlDark)
+              
+            
+        &.cssowl
+          background: url('/assets/img/content/bgcssowl.jpg') top center no-repeat $colorBgLight
+          background-size: 100% 295px
+          > .head
+            @include sprite-logo-cssowl-after-absolute-inside(bottom, center, -4px, 0)
+          > .badge
+            color: $colorFontCssowl
+          > .price
+            background: $colorCssowlLight
+          > .features
+            > .check
+              @include sprite-icon-checkCss-before-absolute-outside(top,left, -7px, 20px)  
+          > .btnarea
+            > .btn
+              @include backgroundGradient($colorCssowlLight, $colorCssowlDark)
+          
+            
+          
+        > .head
+          height: 190px
+          
+        > .badge
+          position: relative
+          font-size: $fontSizeSuperBig
+          height: 55px
+          @include sprite-graphic-leftBadge-before-absolute-outside(middle, left, 0, -3px)
+          @include sprite-graphic-rightBadge-after-absolute-outside(middle, right, 0, -3px)
+          
+          > .badgeinner
+            position: absolute
+            width: 102%
+            right: -1%
+            height: 55px
+            background: $colorBadge
+            text-align: center
+          
+        > .info
+          height: 50px
+          padding-top: 10px
+          font-size: $fontSizeTitle
+          text-align: center
+          
+        > .price
+          height: 65px
+          color: $colorFontWhite
+          font-size: $fontSizeBig
+          text-align: center
+          
+          > .bigPrice
+            font-size: $fontSizeBig
+            
+        > .features
+          padding: 3% 10% 3% 15%
+          font-size: $fontSizeTitle
+        
+        > .btnarea
+          text-align: center
+          margin-bottom: 40px
+          >.btn
+            font-size: $fontSizeBig
+            text-decoration: none
+            color: $colorFontWhite
+            padding: 10px 20px
+            @include roundedBox($cornerRaduis)
+            
+    &.social
+      padding: 25px 0
+      text-align: center
+  
+      .box
+        display: inline
+        margin: 0 10px
+        vertical-align: middle
+        
+        &.content
+          display: block
+          padding-bottom: 10px
+  
+      .owl
+        position: absolute
+        bottom: -27px
+        right: 0
+
+footer
+  background: $colorBadge
+  color: $colorFontFooter
+  padding-top: 20px
+  height: 100px
+
+  .copyright
+    float: left
+  
+  .madeby
+    float: right
+
+    > .wjds
+      margin-left: 5px
+      @include sprite-graphic-wjds-replace-inline(-5px)
+      
+      
+      
+
+@media (min-width: $screen-desktop)
+  #main
+    .section
+      &.social
+        .box
+          &.content
+            display: inline
+            padding-top: -10px
+      
+  
+      
+      
+      
+      

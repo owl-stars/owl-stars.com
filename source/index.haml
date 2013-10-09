@@ -1,8 +1,93 @@
 ---
-title: Welcome to Middleman
+title: Home
 ---
 
-.welcome
-  %h1 Middleman is Watching :)
-  %p.doc
-    = link_to "Read Online Documentation", "http://middlemanapp.com/"
+%header
+  = partial "partial/head"
+  
+  #cinema
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+          %p.subtitle Improve your workflow
+          %h2.title Convert your Photoshop files to Css, Less, Sass, Scss and Stylus Sprites
+
+#main
+  .section.products
+    .container
+      .row
+        .col-sm-6
+          .col-sm-9.col-sm-offset-1.product.spriteowl
+            .head
+            .badge
+              .badgeinner
+                Spriteowl
+            .info
+              Photoshop Extension
+            .price
+              Just for $
+              %span.bigPrice> 13
+              %span .99
+            .features
+              %p.check Css, Less, Sass, Scss and Stylus support
+              %p.check Easy to use
+              %p.check Photoshop CS6 und CC version
+            .btnarea
+              %a.btn{title: "Spriteowl", href: "http://spriteowl.owl-stars.com"} Show me more
+              
+        .col-sm-6
+          .col-sm-9.col-sm-offset-1.product.cssowl
+            .head
+            .badge
+              .badgeinner
+                Cssowl
+            .info
+              Open Source Framework
+            .price
+              Just for
+              %span.bigPrice Free
+            .features
+              %p.check Css, Less, Sass, Scss and Stylus support
+              %p.check Easy to use
+              %p.check Photoshop CS6 und CC version
+            .btnarea
+              %a.btn{title: "Cssowl", href: "http://cssowl.owl-stars.com"} Show me more
+                
+              
+  .section.social.bgdark
+    .container
+      .row
+        .col-sm-12
+          
+          .box.content
+            If you like this page share it with your friends
+      
+          .box.twitter
+            %a{href: "https://twitter.com/share", class: "twitter-share-button", "data-dnt" => "true"} Tweet
+            :javascript
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      
+          .box.facebook
+            %div{class: "fb-like", "data-send" => "true", "data-layout" => "button_count", "data-width" => "300", "data-show-faces" => "false", "data-font" => "arial"}
+            :javascript
+              (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/de_DE/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));
+      
+          .box.googleplus
+      
+            %div{ class: "g-plus", "data-action" => "share", "data-annotation" => "bubble" }
+            :javascript
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+              
+          %img.owl{src: "assets/img/content/owls/like-me-owl.png"}
+
+      
