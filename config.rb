@@ -3,7 +3,7 @@
 ###
 
 set :site_name, "Owl-Stars"
-set :site_description, "Edit your config.rb to set the global description."
+set :site_description, "Owl-Stars Tools help you save time and work faster!"
 
 ###
 # Compass
@@ -76,4 +76,12 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+# Deploy-specific configuration
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.method = :rsync
+  deploy.host   = "www.owl-stars.com"
+  deploy.path   = "/var/www/owl-stars.com/htdocs"
 end
