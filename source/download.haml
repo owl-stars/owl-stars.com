@@ -1,0 +1,62 @@
+---
+title: Download
+---
+
+#cinema
+  .container
+    .row
+      .col-xs-12
+        %h2.title Thank you for purchasing an Owl-Star Product
+
+#main
+  .section.download
+    .container
+      .row
+        .col-xs-12.col-md-8.col-md-offset-2.intro
+          %h2.introTitle Download for {{ order.name }}
+
+          %p.introText
+            Order {{ order.number }}
+
+      .row
+        .col-xs-12
+          .agbbox
+            <strong>License agreement</strong>
+            %br
+            The Spriteowl Photoshop extension license permits you the right to install your copy of the Spriteowl Photoshop extension on a single computer system. It does not however, permit you the right to install your copy on multiple computers.
+            %br
+            %br
+            <strong>Disclaimer</strong>
+            %br
+            The Spriteowl Photoshop extension is provided 'as-is' without warranty of any kind. We Just Do Stuff are not liable for any damages arising out of any defects in the materials. In no event shall We Just Do Stuff be liable for any damages including, but not limited to, direct, indirect, special, incidental or consequential damages or other losses arising out of the use of or inability to use the Spriteowl Photoshop extension.
+            %br
+            %br
+            <strong>Refund policy</strong>
+            %br
+            No refund will be offered for products once sold as the Spriteowl Photoshop extension is a digital file. However, files can be replaced if damaged or lost. Simply send us an email with your transaction ID.
+            %br
+            %br
+            <strong>Reserved rights</strong>
+            %br
+            We reserve rights to change the price of the Spriteowl Photoshop extension without prior notice and at our sole discretion. We reserve the rights to make changes to these 'terms and conditions' without any prior notice at our sole discretion.
+            %br
+              %br
+
+      .row
+        .col-xs-12
+          .info
+            .accept
+              <strong>By downloading the software below, I acknowledge that I have read and agreed to the terms above.</strong>
+            {% for product in order.products %}
+            {% for file in product.files %}
+
+            %a.button{title: "Download", href: "{{ file.link }}"} Download
+
+            .downloadinfo
+              {{ product.name }} {% if file.filesize %} / ({{ file.filesize}}) {% endif %}
+
+            {% endfor %}
+            {% endfor %}
+
+            .downloadproblem
+              <strong>Trouble downloading?</strong> Right click the link above and 'Save File As...' or 'Save Target As...' or try a different browser like Firefox, Chrome, or Safari.

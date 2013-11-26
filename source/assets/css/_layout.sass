@@ -36,11 +36,10 @@ h3
 
 input, button
   @include roundedBox($cornerRaduis)
+  border: 1px solid $colorBorder
   box-shadow: none
-  height: 34px
-  padding: 0 10px
-  border: none
-  
+  height: 28px
+  padding: 0 8px
 
 
 
@@ -117,10 +116,10 @@ header
         font-size: $fontSizeSubTitle
 
 #cinema
-  height: 380px
   width: 100%
   text-align: center
-  background: url('/assets/img/cinema/bghome.png') top center no-repeat $colorBgDark
+  height: 130px
+  background: $urlBgCinema top center no-repeat $colorBgDark
 
   .subtitle
     margin-top: 50px
@@ -130,19 +129,25 @@ header
     color: $colorFontWhite
 
   .title
-    margin-top: 0
+    margin-top: 40px
     font-size: $fontSizeMegaBig
     color: $colorFontWhite
+
+  &.home
+    height: 380px
+    background: $urlBgCinemaBig top center no-repeat $colorBgDark
+
+    .title
+      margin-top: 0
       
 #main
-  //min-height: 600px
   position: relative
   background: $urlBgImgLight
   
   .section
 
     a
-      color: $colorFontSpriteowl
+      color: $colorFontGreyDark
       font-weight: bold
       &:hover
         color: $colorFontDefault
@@ -212,8 +217,6 @@ header
                 color: $colorFontWhite
                 background: $colorCssowlLight
 
-          
-
         > .head
           height: 140px
           text-align: center
@@ -260,6 +263,46 @@ header
             padding: 10px 20px
             @include roundedBox($cornerRaduis)
 
+    &.download
+      padding-top: 40px
+      padding-bottom: 90px
+
+      .agbbox
+        @include roundedBox($cornerRaduis)
+        background: $colorBgLight
+        height: 300px
+        padding: 20px 30px
+        overflow-y: auto
+
+      .info
+        text-align: center
+        margin: 30px 0
+
+        .accept
+          margin-bottom: 30px
+
+        .button
+          @include fontSpecialRegular
+          font-size: $fontSizeSuperBig
+          @include roundedBox($cornerRaduis)
+          display: inline
+          cursor: pointer
+          padding: 10px 20px
+          text-decoration: none
+          border: 1px solid $colorFontGreyDark
+          color: $colorFontGreyDark
+          text-transform: uppercase
+          &:hover
+            text-decoration: none
+            color: $colorFontWhite !important
+            background: $colorFontGreyDark
+
+        .downloadinfo
+          margin: 15px 0 30px
+
+        .downloadproblem
+          color: $colorFontGrey
+          margin: 20px 0 30px
 
 
     &.about
@@ -317,6 +360,9 @@ footer
       margin-top: 20px
       text-align: center
 
+    .copyright
+      margin-top: 20px
+
     .madeby
       text-align: center
       padding-top: 20px
@@ -349,7 +395,7 @@ footer
       .title
         float: left
         margin-left: 30px
-        margin-top: 0
+        margin-top: -3px
 
     .info
       .twitter

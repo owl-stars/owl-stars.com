@@ -54,8 +54,12 @@
 
         .row.info
           .col-xs-12.col-sm-6
-            .twitter
-              %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "Spriteowl", :via => "Owl_Stars", :url => "http://spriteowl.owl-stars.com/"}} Tweet
+            - if (page_classes == 'index')
+              .twitter
+                %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "Spriteowl", :via => "Owl_Stars", :url => "http://spriteowl.owl-stars.com/"}} Tweet
+            - else
+              .copyright
+                © Copyrightby Owl-Stars
           .col-xs-12.col-sm-6
             .madeby
               Owl-Stars is made by

@@ -24,7 +24,7 @@ set :site_description, "Owl-Stars Tools help you save time and work faster!"
 page "/404.html", :layout => false
 #
 # With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
+# page "download.html", :layout => :fetchapp
 #
 # A path which all have the same layout
 # with_layout :admin do
