@@ -5,6 +5,7 @@
     "modernizr": "~2.6.2",
     "normalize-css": "~2.1.0",
     "sass-bootstrap": "~3.0.0",
-    "cssowl": "~1.0.6"
+    "cssowl": "~1.0.6",
+    "ajaxchimp": "~1.0.2"
   }
 }

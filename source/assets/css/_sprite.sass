@@ -9,6 +9,7 @@
 //
 // - sprite/
 //   - logo/
+//     - owlstars
 //     - cssowl
 //     - spriteowl
 //   - icon/
@@ -17,15 +18,66 @@
 //     - home
 //   - graphic/
 //     - wjds
-//     - bigArrowDown
-//     - bigArrowRight
-//     - leftBadge
-//     - rightBadge
 //
+$sprite-logo-owlstars-x: 0
+$sprite-logo-owlstars-y: 0
+$sprite-logo-owlstars-width: 85px
+$sprite-logo-owlstars-height: 89px
+$sprite-logo-owlstars-src: $sprite
+
+@mixin sprite-logo-owlstars-position()
+  background-position: $sprite-logo-owlstars-x $sprite-logo-owlstars-y
+@mixin sprite-logo-owlstars-display()
+  +cssowl-sprite-display($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src)
+@mixin sprite-logo-owlstars-display-block()
+  +cssowl-sprite-display-block($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src)
+@mixin sprite-logo-owlstars-display-inline($yOffset:0, $valign:middle)
+  +cssowl-sprite-display-inline($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $yOffset, $valign)
+@mixin sprite-logo-owlstars-replace()
+  +cssowl-sprite-replace($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src)
+@mixin sprite-logo-owlstars-replace-block()
+  +cssowl-sprite-replace-block($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src)
+@mixin sprite-logo-owlstars-replace-inline($yOffset:0, $valign:middle)
+  +cssowl-sprite-replace-inline($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $yOffset, $valign)
+@mixin sprite-logo-owlstars-absolute($top:none, $right:none, $bottom:none, $left:none)
+  +cssowl-sprite-absolute($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $top, $right, $bottom, $left)
+@mixin sprite-logo-owlstars-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
+  +cssowl-sprite-absolute-inside($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $valign, $halign, $xOffset, $yOffset)
+@mixin sprite-logo-owlstars-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
+  +cssowl-sprite-absolute-outside($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $valign, $halign, $xOffset, $yOffset)
+@mixin sprite-logo-owlstars-float-left($xOffset:0, $yOffset:0)
+  +cssowl-sprite-float-left($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $xOffset, $yOffset)
+@mixin sprite-logo-owlstars-float-right($xOffset:0, $yOffset:0)
+  +cssowl-sprite-float-right($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $xOffset, $yOffset)
+@mixin sprite-logo-owlstars-before()
+  +cssowl-sprite-before($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src)
+@mixin sprite-logo-owlstars-before-inline($xOffset:0, $yOffset:0, $valign:middle)
+  +cssowl-sprite-before-inline($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $xOffset, $yOffset, $valign)
+@mixin sprite-logo-owlstars-before-float($xOffset:0, $yOffset:0)
+  +cssowl-sprite-before-float($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $xOffset, $yOffset)
+@mixin sprite-logo-owlstars-before-absolute($top:none, $right:none, $bottom:none, $left:none)
+  +cssowl-sprite-before-absolute($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $top, $right, $bottom, $left)
+@mixin sprite-logo-owlstars-before-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
+  +cssowl-sprite-before-absolute-inside($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $valign, $halign, $xOffset, $yOffset)
+@mixin sprite-logo-owlstars-before-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
+  +cssowl-sprite-before-absolute-outside($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $valign, $halign, $xOffset, $yOffset)
+@mixin sprite-logo-owlstars-after()
+  +cssowl-sprite-after($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src)
+@mixin sprite-logo-owlstars-after-inline($xOffset:0, $yOffset:0, $valign:middle)
+  +cssowl-sprite-after-inline($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $xOffset, $yOffset, $valign)
+@mixin sprite-logo-owlstars-after-float($xOffset:0, $yOffset:0)
+  +cssowl-sprite-after-float($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $xOffset, $yOffset)
+@mixin sprite-logo-owlstars-after-absolute($top:none, $right:none, $bottom:none, $left:none)
+  +cssowl-sprite-after-absolute($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $top, $right, $bottom, $left)
+@mixin sprite-logo-owlstars-after-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
+  +cssowl-sprite-after-absolute-inside($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $valign, $halign, $xOffset, $yOffset)
+@mixin sprite-logo-owlstars-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
+  +cssowl-sprite-after-absolute-outside($sprite-logo-owlstars-x, $sprite-logo-owlstars-y, $sprite-logo-owlstars-width, $sprite-logo-owlstars-height, $sprite-logo-owlstars-src, $valign, $halign, $xOffset, $yOffset)
+
 $sprite-logo-cssowl-x: -150px
-$sprite-logo-cssowl-y: 0
-$sprite-logo-cssowl-width: 142px
-$sprite-logo-cssowl-height: 148px
+$sprite-logo-cssowl-y: -100px
+$sprite-logo-cssowl-width: 99px
+$sprite-logo-cssowl-height: 103px
 $sprite-logo-cssowl-src: $sprite
 
 @mixin sprite-logo-cssowl-position()
@@ -78,9 +130,9 @@ $sprite-logo-cssowl-src: $sprite
   +cssowl-sprite-after-absolute-outside($sprite-logo-cssowl-x, $sprite-logo-cssowl-y, $sprite-logo-cssowl-width, $sprite-logo-cssowl-height, $sprite-logo-cssowl-src, $valign, $halign, $xOffset, $yOffset)
 
 $sprite-logo-spriteowl-x: 0
-$sprite-logo-spriteowl-y: 0
-$sprite-logo-spriteowl-width: 142px
-$sprite-logo-spriteowl-height: 149px
+$sprite-logo-spriteowl-y: -100px
+$sprite-logo-spriteowl-width: 99px
+$sprite-logo-spriteowl-height: 103px
 $sprite-logo-spriteowl-src: $sprite
 
 @mixin sprite-logo-spriteowl-position()
@@ -132,8 +184,8 @@ $sprite-logo-spriteowl-src: $sprite
 @mixin sprite-logo-spriteowl-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
   +cssowl-sprite-after-absolute-outside($sprite-logo-spriteowl-x, $sprite-logo-spriteowl-y, $sprite-logo-spriteowl-width, $sprite-logo-spriteowl-height, $sprite-logo-spriteowl-src, $valign, $halign, $xOffset, $yOffset)
 
-$sprite-icon-checkCss-x: -150px
-$sprite-icon-checkCss-y: -201px
+$sprite-icon-checkCss-x: -49px
+$sprite-icon-checkCss-y: -251px
 $sprite-icon-checkCss-width: 15px
 $sprite-icon-checkCss-height: 14px
 $sprite-icon-checkCss-src: $sprite
@@ -188,7 +240,7 @@ $sprite-icon-checkCss-src: $sprite
   +cssowl-sprite-after-absolute-outside($sprite-icon-checkCss-x, $sprite-icon-checkCss-y, $sprite-icon-checkCss-width, $sprite-icon-checkCss-height, $sprite-icon-checkCss-src, $valign, $halign, $xOffset, $yOffset)
 
 $sprite-icon-checkSprite-x: --1px
-$sprite-icon-checkSprite-y: -201px
+$sprite-icon-checkSprite-y: -251px
 $sprite-icon-checkSprite-width: 15px
 $sprite-icon-checkSprite-height: 14px
 $sprite-icon-checkSprite-src: $sprite
@@ -243,7 +295,7 @@ $sprite-icon-checkSprite-src: $sprite
   +cssowl-sprite-after-absolute-outside($sprite-icon-checkSprite-x, $sprite-icon-checkSprite-y, $sprite-icon-checkSprite-width, $sprite-icon-checkSprite-height, $sprite-icon-checkSprite-src, $valign, $halign, $xOffset, $yOffset)
 
 $sprite-icon-home-x: 0
-$sprite-icon-home-y: -250px
+$sprite-icon-home-y: -300px
 $sprite-icon-home-width: 22px
 $sprite-icon-home-height: 20px
 $sprite-icon-home-src: $sprite
@@ -297,8 +349,8 @@ $sprite-icon-home-src: $sprite
 @mixin sprite-icon-home-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
   +cssowl-sprite-after-absolute-outside($sprite-icon-home-x, $sprite-icon-home-y, $sprite-icon-home-width, $sprite-icon-home-height, $sprite-icon-home-src, $valign, $halign, $xOffset, $yOffset)
 
-$sprite-graphic-wjds-x: -2px
-$sprite-graphic-wjds-y: -403px
+$sprite-graphic-wjds-x: -1px
+$sprite-graphic-wjds-y: -350px
 $sprite-graphic-wjds-width: 127px
 $sprite-graphic-wjds-height: 18px
 $sprite-graphic-wjds-src: $sprite
@@ -351,224 +403,4 @@ $sprite-graphic-wjds-src: $sprite
   +cssowl-sprite-after-absolute-inside($sprite-graphic-wjds-x, $sprite-graphic-wjds-y, $sprite-graphic-wjds-width, $sprite-graphic-wjds-height, $sprite-graphic-wjds-src, $valign, $halign, $xOffset, $yOffset)
 @mixin sprite-graphic-wjds-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
   +cssowl-sprite-after-absolute-outside($sprite-graphic-wjds-x, $sprite-graphic-wjds-y, $sprite-graphic-wjds-width, $sprite-graphic-wjds-height, $sprite-graphic-wjds-src, $valign, $halign, $xOffset, $yOffset)
-
-$sprite-graphic-bigArrowDown-x: -50px
-$sprite-graphic-bigArrowDown-y: -300px
-$sprite-graphic-bigArrowDown-width: 40px
-$sprite-graphic-bigArrowDown-height: 42px
-$sprite-graphic-bigArrowDown-src: $sprite
-
-@mixin sprite-graphic-bigArrowDown-position()
-  background-position: $sprite-graphic-bigArrowDown-x $sprite-graphic-bigArrowDown-y
-@mixin sprite-graphic-bigArrowDown-display()
-  +cssowl-sprite-display($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src)
-@mixin sprite-graphic-bigArrowDown-display-block()
-  +cssowl-sprite-display-block($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src)
-@mixin sprite-graphic-bigArrowDown-display-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-display-inline($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $yOffset, $valign)
-@mixin sprite-graphic-bigArrowDown-replace()
-  +cssowl-sprite-replace($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src)
-@mixin sprite-graphic-bigArrowDown-replace-block()
-  +cssowl-sprite-replace-block($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src)
-@mixin sprite-graphic-bigArrowDown-replace-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-replace-inline($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $yOffset, $valign)
-@mixin sprite-graphic-bigArrowDown-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-absolute($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-bigArrowDown-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-inside($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowDown-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-outside($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowDown-float-left($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-left($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowDown-float-right($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-right($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowDown-before()
-  +cssowl-sprite-before($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src)
-@mixin sprite-graphic-bigArrowDown-before-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-before-inline($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $xOffset, $yOffset, $valign)
-@mixin sprite-graphic-bigArrowDown-before-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-float($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowDown-before-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-before-absolute($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-bigArrowDown-before-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-inside($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowDown-before-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-outside($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowDown-after()
-  +cssowl-sprite-after($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src)
-@mixin sprite-graphic-bigArrowDown-after-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-after-inline($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $xOffset, $yOffset, $valign)
-@mixin sprite-graphic-bigArrowDown-after-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-float($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowDown-after-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-after-absolute($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-bigArrowDown-after-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-inside($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowDown-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-outside($sprite-graphic-bigArrowDown-x, $sprite-graphic-bigArrowDown-y, $sprite-graphic-bigArrowDown-width, $sprite-graphic-bigArrowDown-height, $sprite-graphic-bigArrowDown-src, $valign, $halign, $xOffset, $yOffset)
-
-$sprite-graphic-bigArrowRight-x: 0
-$sprite-graphic-bigArrowRight-y: -300px
-$sprite-graphic-bigArrowRight-width: 42px
-$sprite-graphic-bigArrowRight-height: 39px
-$sprite-graphic-bigArrowRight-src: $sprite
-
-@mixin sprite-graphic-bigArrowRight-position()
-  background-position: $sprite-graphic-bigArrowRight-x $sprite-graphic-bigArrowRight-y
-@mixin sprite-graphic-bigArrowRight-display()
-  +cssowl-sprite-display($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src)
-@mixin sprite-graphic-bigArrowRight-display-block()
-  +cssowl-sprite-display-block($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src)
-@mixin sprite-graphic-bigArrowRight-display-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-display-inline($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $yOffset, $valign)
-@mixin sprite-graphic-bigArrowRight-replace()
-  +cssowl-sprite-replace($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src)
-@mixin sprite-graphic-bigArrowRight-replace-block()
-  +cssowl-sprite-replace-block($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src)
-@mixin sprite-graphic-bigArrowRight-replace-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-replace-inline($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $yOffset, $valign)
-@mixin sprite-graphic-bigArrowRight-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-absolute($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-bigArrowRight-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-inside($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowRight-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-outside($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowRight-float-left($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-left($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowRight-float-right($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-right($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowRight-before()
-  +cssowl-sprite-before($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src)
-@mixin sprite-graphic-bigArrowRight-before-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-before-inline($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $xOffset, $yOffset, $valign)
-@mixin sprite-graphic-bigArrowRight-before-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-float($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowRight-before-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-before-absolute($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-bigArrowRight-before-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-inside($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowRight-before-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-outside($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowRight-after()
-  +cssowl-sprite-after($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src)
-@mixin sprite-graphic-bigArrowRight-after-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-after-inline($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $xOffset, $yOffset, $valign)
-@mixin sprite-graphic-bigArrowRight-after-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-float($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowRight-after-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-after-absolute($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-bigArrowRight-after-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-inside($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-bigArrowRight-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-outside($sprite-graphic-bigArrowRight-x, $sprite-graphic-bigArrowRight-y, $sprite-graphic-bigArrowRight-width, $sprite-graphic-bigArrowRight-height, $sprite-graphic-bigArrowRight-src, $valign, $halign, $xOffset, $yOffset)
-
-$sprite-graphic-leftBadge-x: -101px
-$sprite-graphic-leftBadge-y: -300px
-$sprite-graphic-leftBadge-width: 49px
-$sprite-graphic-leftBadge-height: 63px
-$sprite-graphic-leftBadge-src: $sprite
-
-@mixin sprite-graphic-leftBadge-position()
-  background-position: $sprite-graphic-leftBadge-x $sprite-graphic-leftBadge-y
-@mixin sprite-graphic-leftBadge-display()
-  +cssowl-sprite-display($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src)
-@mixin sprite-graphic-leftBadge-display-block()
-  +cssowl-sprite-display-block($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src)
-@mixin sprite-graphic-leftBadge-display-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-display-inline($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $yOffset, $valign)
-@mixin sprite-graphic-leftBadge-replace()
-  +cssowl-sprite-replace($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src)
-@mixin sprite-graphic-leftBadge-replace-block()
-  +cssowl-sprite-replace-block($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src)
-@mixin sprite-graphic-leftBadge-replace-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-replace-inline($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $yOffset, $valign)
-@mixin sprite-graphic-leftBadge-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-absolute($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-leftBadge-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-inside($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-leftBadge-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-outside($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-leftBadge-float-left($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-left($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $xOffset, $yOffset)
-@mixin sprite-graphic-leftBadge-float-right($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-right($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $xOffset, $yOffset)
-@mixin sprite-graphic-leftBadge-before()
-  +cssowl-sprite-before($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src)
-@mixin sprite-graphic-leftBadge-before-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-before-inline($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $xOffset, $yOffset, $valign)
-@mixin sprite-graphic-leftBadge-before-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-float($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $xOffset, $yOffset)
-@mixin sprite-graphic-leftBadge-before-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-before-absolute($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-leftBadge-before-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-inside($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-leftBadge-before-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-outside($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-leftBadge-after()
-  +cssowl-sprite-after($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src)
-@mixin sprite-graphic-leftBadge-after-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-after-inline($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $xOffset, $yOffset, $valign)
-@mixin sprite-graphic-leftBadge-after-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-float($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $xOffset, $yOffset)
-@mixin sprite-graphic-leftBadge-after-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-after-absolute($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-leftBadge-after-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-inside($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-leftBadge-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-outside($sprite-graphic-leftBadge-x, $sprite-graphic-leftBadge-y, $sprite-graphic-leftBadge-width, $sprite-graphic-leftBadge-height, $sprite-graphic-leftBadge-src, $valign, $halign, $xOffset, $yOffset)
-
-$sprite-graphic-rightBadge-x: -150px
-$sprite-graphic-rightBadge-y: -300px
-$sprite-graphic-rightBadge-width: 49px
-$sprite-graphic-rightBadge-height: 63px
-$sprite-graphic-rightBadge-src: $sprite
-
-@mixin sprite-graphic-rightBadge-position()
-  background-position: $sprite-graphic-rightBadge-x $sprite-graphic-rightBadge-y
-@mixin sprite-graphic-rightBadge-display()
-  +cssowl-sprite-display($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src)
-@mixin sprite-graphic-rightBadge-display-block()
-  +cssowl-sprite-display-block($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src)
-@mixin sprite-graphic-rightBadge-display-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-display-inline($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $yOffset, $valign)
-@mixin sprite-graphic-rightBadge-replace()
-  +cssowl-sprite-replace($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src)
-@mixin sprite-graphic-rightBadge-replace-block()
-  +cssowl-sprite-replace-block($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src)
-@mixin sprite-graphic-rightBadge-replace-inline($yOffset:0, $valign:middle)
-  +cssowl-sprite-replace-inline($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $yOffset, $valign)
-@mixin sprite-graphic-rightBadge-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-absolute($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-rightBadge-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-inside($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-rightBadge-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-absolute-outside($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-rightBadge-float-left($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-left($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $xOffset, $yOffset)
-@mixin sprite-graphic-rightBadge-float-right($xOffset:0, $yOffset:0)
-  +cssowl-sprite-float-right($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $xOffset, $yOffset)
-@mixin sprite-graphic-rightBadge-before()
-  +cssowl-sprite-before($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src)
-@mixin sprite-graphic-rightBadge-before-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-before-inline($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $xOffset, $yOffset, $valign)
-@mixin sprite-graphic-rightBadge-before-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-float($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $xOffset, $yOffset)
-@mixin sprite-graphic-rightBadge-before-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-before-absolute($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-rightBadge-before-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-inside($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-rightBadge-before-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-before-absolute-outside($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-rightBadge-after()
-  +cssowl-sprite-after($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src)
-@mixin sprite-graphic-rightBadge-after-inline($xOffset:0, $yOffset:0, $valign:middle)
-  +cssowl-sprite-after-inline($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $xOffset, $yOffset, $valign)
-@mixin sprite-graphic-rightBadge-after-float($xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-float($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $xOffset, $yOffset)
-@mixin sprite-graphic-rightBadge-after-absolute($top:none, $right:none, $bottom:none, $left:none)
-  +cssowl-sprite-after-absolute($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $top, $right, $bottom, $left)
-@mixin sprite-graphic-rightBadge-after-absolute-inside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-inside($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $valign, $halign, $xOffset, $yOffset)
-@mixin sprite-graphic-rightBadge-after-absolute-outside($valign:top, $halign:left, $xOffset:0, $yOffset:0)
-  +cssowl-sprite-after-absolute-outside($sprite-graphic-rightBadge-x, $sprite-graphic-rightBadge-y, $sprite-graphic-rightBadge-width, $sprite-graphic-rightBadge-height, $sprite-graphic-rightBadge-src, $valign, $halign, $xOffset, $yOffset)
 

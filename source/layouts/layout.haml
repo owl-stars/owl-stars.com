@@ -34,18 +34,33 @@
 
   %body{:class => page_classes}
 
+    %header
+      = partial "partial/topbar"
+      = partial "partial/head"
+
     = yield
 
     %footer
       .container
         .row
-          .col-md-12
-            .copyright
-              Copyright &copy; 2013 by Owl-Stars
+          .col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2.newsletter
+            .title
+              Never miss an update again!
+            %form#mailchimpform
+              %input#mc-email{placeholder: "Your E-Mail adress", type: "email"}
+              %button{type: "submit"} Subscribe
+              %br
+              %label{for: "mc-email"}
 
+        .row.info
+          .col-xs-12.col-sm-6
+            .twitter
+              %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "Spriteowl", :via => "Owl_Stars", :url => "http://spriteowl.owl-stars.com/"}} Tweet
+          .col-xs-12.col-sm-6
             .madeby
               Owl-Stars is made by
-              %a{title: "We Just Do Stuff", href: "http://www.wejustdostuff.com", class: "wjds"} We Just Do Stuff
+              %a{title: "We Just Do Stuff", href: "http://www.wejustdostuff.com", target: "_blank", class: "wjds"} We Just Do Stuff
+
 
     = javascript_include_tag  "main"
 
