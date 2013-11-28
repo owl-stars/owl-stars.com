@@ -23,4 +23,3 @@ end
 
 desc "Build and start server"
 task :default => [:server]
-

@@ -7,36 +7,27 @@
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     %meta{:content => "width=device-width", :name => "viewport"}
-    %title= page_title
-    %meta{:content => page_description, :name => "description"}
-    %link{ rel: "apple-touch-icon", sizes: "144x144", href: "/apple-touch-icon-144x144-precomposed.png" }
-    %link{ rel: "apple-touch-icon", sizes: "120x120", href: "/apple-touch-icon-120x120-precomposed.png" }
-    %link{ rel: "apple-touch-icon", sizes: "114x114", href: "/apple-touch-icon-114x114-precomposed.png" }
-    %link{ rel: "apple-touch-icon", sizes: "72x72", href: "/apple-touch-icon-72x72-precomposed.png" }
-    %link{ rel: "apple-touch-icon", sizes: "57x57", href: "/apple-touch-icon-57x57-precomposed.png" }
-    %link{ rel: "apple-touch-icon", href: "apple-touch-icon-precomposed.png" }
+    %title= data.site.name
+    %meta{:content => data.site.version, :name => "version"}
+    %meta{:content => data.site.description, :name => "description"}
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "120x120", href: "apple-touch-icon-120x120-precomposed.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "72x72", href: "apple-touch-icon-72x72-precomposed.png" }
+    %link{ rel: "apple-touch-icon-precomposed", sizes: "57x57", href: "apple-touch-icon-57x57-precomposed.png" }
+    %link{ rel: "apple-touch-icon-precomposed", href: "apple-touch-icon-precomposed.png" }
     %link{ rel: "shortcut icon", href: "favicon.png" }
     %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", "all"
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", "site"
     = javascript_include_tag  "modernizr"
-
-    :javascript
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-23550216-4']);
-      _gaq.push(['_gat._anonymizeIp', true]);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    = google_analytics_tag
 
   %body{:class => page_classes}
 
     %header
-      = partial "partial/topbar"
-      = partial "partial/head"
+      = partial "partials/topbar"
+      = partial "partials/head"
 
     = yield
 
@@ -47,7 +38,7 @@
             .title
               Never miss an update again!
             %form#mailchimpform
-              %input#mc-email{placeholder: "Your E-Mail adress", type: "email"}
+              %input#mc-email{placeholder: "Your E-Mail address", type: "email"}
               %button{type: "submit"} Subscribe
               %br
               %label{for: "mc-email"}
@@ -59,7 +50,7 @@
                 %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "Spriteowl", :via => "Owl_Stars", :url => "http://spriteowl.owl-stars.com/"}} Tweet
             - else
               .copyright
-                © Copyrightby Owl-Stars
+                Copyright © #{Time.now.year} by Owl-Stars
           .col-xs-12.col-sm-6
             .madeby
               Owl-Stars is made by

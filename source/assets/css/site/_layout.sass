@@ -1,0 +1,362 @@
+// ---- layout ------------------------------------------------------------------------------------
+
+// --- header ---
+
+header
+  background: $urlBgImgLight
+
+  #topbar
+    height: 40px
+    background: $colorBadge
+
+    .sitenavi
+      float: left
+      margin: 0
+      padding: 0
+      text-align: center
+
+      li
+        float: left
+        list-style-type: none
+        margin: 0 18px
+        padding-top: 7px
+        min-height: 40px
+        @include fontSpecialRegular
+        font-size: $fontSizeTitle
+
+        &:hover
+          border-bottom: 3px solid $colorFontGreyDark
+          &.spriteowl
+            border-color: $colorSpriteowlLight
+            a
+              color: $colorSpriteowlLight
+          &.cssowl
+            border-color: $colorCssowlLight
+            a
+              color: $colorCssowlLight
+        &.active
+          border-bottom: 3px solid $colorFontGreyDark
+          a
+            color: $colorFontGreyDark
+        a
+          color: $colorFontGreyDark
+          text-decoration: none
+          > .home
+            @include sprite-icon-home-replace-inline(-4px)
+
+    .madeby
+      color: $colorFontGreyDark
+      padding-top: 6px
+      line-height: 25px
+      float: right
+      > .wjds
+        margin-left: 5px
+        @include sprite-graphic-wjds-replace-inline(-5px)
+
+  > .head
+    height: 120px
+
+    .logo
+      font-size: $fontSizeBase
+      padding-top: 33px
+      @include sprite-logo-owlstars-before-absolute()
+      text-decoration: none
+      color: $colorFontDefault
+      h1
+        margin: 14px 0 0 90px
+      h2
+        color: $colorFontGreyDark
+        margin: -8px 0 0 120px
+        font-size: $fontSizeSubTitle
+
+#cinema
+  width: 100%
+  text-align: center
+  height: 130px
+  background: $urlBgCinema top center no-repeat $colorBgDark
+
+  .subtitle
+    margin-top: 50px
+    margin-bottom: 10px
+    @include fontSpecialRegular
+    font-size: $fontSizeBig
+    color: $colorFontWhite
+
+  .title
+    margin-top: 40px
+    font-size: $fontSizeMegaBig
+    color: $colorFontWhite
+
+  &.home
+    height: 380px
+    background: $urlBgCinemaBig top center no-repeat $colorBgDark
+
+    .title
+      margin-top: 0
+
+#main
+  position: relative
+  background: $urlBgImgLight
+
+  .section
+
+    a
+      color: $colorFontGreyDark
+      font-weight: bold
+      &:hover
+        color: $colorFontDefault
+
+    .intro
+      text-align: center
+      >.introText
+        margin-bottom: 40px
+
+
+    &.bgdark
+      background: $urlBgImgDark
+
+    &.products
+      padding-bottom: 40px
+
+      .product
+        margin-bottom: 40px
+        background: $colorBgLight
+        width: 100%
+        @include fontSpecialRegular
+        +border-radius($cornerRaduis)
+
+        &.spriteowl
+          margin-top: -130px
+          > .head
+            > .logo
+              @include sprite-logo-spriteowl-before-absolute-inside(top, center, -75px, 38px)
+              h2
+                padding: 60px 0 0 100px
+              h3
+                color: $colorFontSpriteowl
+                margin: -40px 0 0 205px
+          > .price
+            background: $colorSpriteowlLight
+          > .features
+            .check
+              @include sprite-icon-checkSprite-before-absolute-outside(top,left, -7px, 20px)
+          > .btnarea
+            > .btn
+              color: $colorFontSpriteowl
+              border: 1px solid $colorSpriteowlLight
+              &:hover
+                color: $colorFontWhite
+                background: $colorSpriteowlLight
+
+
+        &.cssowl
+          > .head
+            > .logo
+              @include sprite-logo-cssowl-before-absolute-inside(top, center, -50px, 38px)
+              h2
+                padding: 60px 0 0 110px
+              h3
+                color: $colorFontCssowl
+                margin: -40px 0 0 215px
+          > .price
+            background: $colorCssowlLight
+          > .features
+            .check
+              @include sprite-icon-checkCss-before-absolute-outside(top,left, -7px, 20px)
+          > .btnarea
+            > .btn
+              color: $colorFontCssowl
+              border: 1px solid $colorCssowlLight
+              &:hover
+                color: $colorFontWhite
+                background: $colorCssowlLight
+
+        > .head
+          height: 140px
+          text-align: center
+
+          > .logo
+            color: $colorFontDefault
+            h2
+              font-size: $fontSizeMegaBig
+            h3
+              font-size: $fontSizeTitle
+
+        > .info
+          min-height: 135px
+          padding: 30px 20px 20px
+          font-size: $fontSizeTitle
+          text-align: center
+
+        > .price
+          color: $colorFontWhite
+          font-size: $fontSizeBig
+          text-align: center
+          padding-bottom: 4px
+
+          > .bigPrice
+            font-size: $fontSizeTitle
+
+        > .features
+          //padding: 3% 10% 3% 15%
+          font-size: $fontSizeTitle
+          ul
+            margin: 0 0 0 70px
+            padding: 0
+            list-style-type: none
+
+        > .btnarea
+          text-align: center
+          padding-top: 40px
+          padding-bottom: 60px
+
+          >.btn
+            font-size: $fontSizeBig
+            text-decoration: none
+            color: $colorFontWhite
+            padding: 10px 20px
+            +border-radius($cornerRaduis)
+
+    &.download
+      padding-top: 40px
+      padding-bottom: 90px
+
+      .agbbox
+        height: 300px
+        overflow-y: auto
+        padding: 20px 30px
+        background: $colorBgLight
+        +border-radius($cornerRaduis)
+
+      .info
+        text-align: center
+        margin: 30px 0
+
+        .accept
+          margin-bottom: 30px
+
+        .button
+          @include fontSpecialRegular
+          display: inline
+          cursor: pointer
+          padding: 10px 20px
+          text-decoration: none
+          color: $colorFontGreyDark
+          text-transform: uppercase
+          font-size: $fontSizeSuperBig
+          +border-radius($cornerRaduis)
+          border: 1px solid $colorFontGreyDark
+
+          &:hover
+            text-decoration: none
+            color: $colorFontWhite !important
+            background: $colorFontGreyDark
+
+        .downloadinfo
+          margin: 15px 0 30px
+
+        .downloadproblem
+          color: $colorFontGrey
+          margin: 20px 0 30px
+
+
+    &.about
+      padding-top: 40px
+      padding-bottom: 90px
+
+      .teaserImg
+        text-align: center
+
+footer
+  background: $colorBadge
+  color: $colorFontGreyDark
+
+  .newsletter
+    text-align: center
+    margin-bottom: 25px
+
+    input
+      width: 200px
+
+    button
+      color: $colorFontGreyDark
+      border: none
+      height: 30px
+      padding: 0 10px
+      margin-left: 5px
+      border: 1px solid $colorFontGreyDark
+      background: $colorBadge
+      text-transform: uppercase
+
+      &:hover
+        color: $colorFontWhite
+        background: $colorFontGreyDark
+
+    label
+      width: 310px
+      text-align: center
+      margin-top: 5px
+      color: $colorFontWhite
+
+    > .title
+      margin-top: 10px
+      margin-bottom: 10px
+      @include fontSpecialRegular
+      font-size: $fontSizeBig
+
+  .info
+    border-top: 1px dashed #444444
+
+    .twitter
+      margin-top: 20px
+      text-align: center
+
+    .copyright
+      margin-top: 20px
+
+    .madeby
+      text-align: center
+      padding-top: 20px
+      margin-bottom: 40px
+      > .wjds
+        margin-left: 5px
+        @include sprite-graphic-wjds-replace-inline(-5px)
+
+// --- Media --------------------------------------------------------------------------------------
+
+@media (min-width: $screen-tablet)
+
+  #main
+    .section
+      &.products
+        .product
+          &.cssowl
+            margin-top: -130px
+
+  footer
+    .newsletter
+      margin-top: 30px
+
+      .title
+        float: left
+        margin-left: 30px
+        margin-top: -3px
+
+    .info
+
+      .twitter
+        float: left
+
+      .madeby
+        float: right
+
+
+
+@media (min-width: $screen-desktop)
+  #main
+    .section
+      &.social
+        .box
+          &.content
+            display: inline
+            padding-top: -10px
