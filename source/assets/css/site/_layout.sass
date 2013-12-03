@@ -102,7 +102,6 @@ header
 
     a
       color: $colorFontGreyDark
-      font-weight: bold
       &:hover
         color: $colorFontDefault
 
@@ -139,7 +138,7 @@ header
             background: $colorSpriteowlLight
           > .features
             .check
-              @include sprite-icon-checkSprite-before-absolute-outside(top,left, -7px, 20px)
+              @include sprite-icon-checkSprite-before-absolute-outside(top,left, -7px, 23px)
           > .btnarea
             > .btn
               color: $colorFontSpriteowl
@@ -162,7 +161,7 @@ header
             background: $colorCssowlLight
           > .features
             .check
-              @include sprite-icon-checkCss-before-absolute-outside(top,left, -7px, 20px)
+              @include sprite-icon-checkCss-before-absolute-outside(top,left, -7px, 23px)
           > .btnarea
             > .btn
               color: $colorFontCssowl
@@ -183,8 +182,8 @@ header
               font-size: $fontSizeTitle
 
         > .info
-          min-height: 135px
-          padding: 30px 20px 20px
+          min-height: 110px
+          padding: 30px 20px 10px
           font-size: $fontSizeTitle
           text-align: center
 
@@ -200,10 +199,14 @@ header
         > .features
           //padding: 3% 10% 3% 15%
           font-size: $fontSizeTitle
+          //@include fontDefaultBold
           ul
-            margin: 0 0 0 70px
+            margin: 0 20px 0 50px
             padding: 0
             list-style-type: none
+
+            li
+              margin: 10px 0
 
         > .btnarea
           text-align: center
@@ -332,6 +335,8 @@ footer
         .product
           &.cssowl
             margin-top: -130px
+          > .features
+            min-height: 225px
 
   footer
     .newsletter
@@ -339,11 +344,10 @@ footer
 
       .title
         float: left
-        margin-left: 30px
+        margin-left: 10px
         margin-top: -3px
 
     .info
-
       .twitter
         float: left
 
@@ -355,8 +359,26 @@ footer
 @media (min-width: $screen-desktop)
   #main
     .section
+      &.products
+        .product
+          > .features
+            min-height: 200px
       &.social
         .box
           &.content
             display: inline
             padding-top: -10px
+
+
+
+@media (min-width: $screen-lg-desktop)
+  #main
+    .section
+      &.products
+        .product
+          > .info
+            min-height: 130px
+          > .features
+            min-height: 170px
+            ul
+              margin: 0 40px 0 70px
