@@ -23,6 +23,7 @@ GEM
       mini_magick (~> 3.5)
     ffi (1.9.3)
     fssm (0.2.10)
+    git (1.2.6)
     haml (4.0.4)
       tilt
     hike (1.2.3)
@@ -71,6 +72,9 @@ GEM
       sprockets (~> 2.1)
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
+    middlesite (0.1.1)
+      git
+      thor
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
     multi_json (1.8.2)
@@ -116,5 +120,6 @@ DEPENDENCIES
   middleman-favicon-maker (~> 3.3)
   middleman-google-analytics (~> 0.0.2)
   middleman-livereload (~> 3.1.0)
+  middlesite (~> 0.1.1)
   ruby18_source_location
   wdm (~> 0.1.0)
