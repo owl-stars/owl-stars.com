@@ -21,8 +21,10 @@ activate :livereload
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :rsync
+  deploy.clean  = true
   deploy.host   = "www.owl-stars.com"
   deploy.path   = "/var/www/owl-stars.com/htdocs"
+  deploy.flags  = "-avz --chmod=Dg+s,ug+w -e"
 end
 
 ###
