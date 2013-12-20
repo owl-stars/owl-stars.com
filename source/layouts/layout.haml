@@ -1,8 +1,8 @@
 !!!5
-/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
-/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
-/[if IE 8] <html class="no-js lt-ie9">
-%html.no-js
+/[if lt IE 7] <html class="lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="lt-ie9 lt-ie8">
+/[if IE 8] <html class="lt-ie9">
+%html
   %head
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
@@ -20,18 +20,16 @@
     %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", "site"
-    = javascript_include_tag  "modernizr"
-    = google_analytics_tag
 
   %body{:class => page_classes}
 
-    %header
+    %header#header
       = partial "partials/topbar"
       = partial "partials/head"
 
     = yield
 
-    %footer
+    %footer#footer
       .container
         .row
           .col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2.newsletter
@@ -58,6 +56,6 @@
 
 
     = javascript_include_tag  "main"
-
+    = google_analytics_tag
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

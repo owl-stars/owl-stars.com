@@ -1,57 +1,57 @@
-// ---- layout ------------------------------------------------------------------------------------
+// --- topbar -------------------------------------------------------------------------------------
 
-// --- header ---
+#topbar
+  height: 40px
+  background: $colorBadge
 
-header
-  background: $urlBgImgLight
+  .sitenavi
+    float: left
+    margin: 0
+    padding: 0
+    text-align: center
 
-  #topbar
-    height: 40px
-    background: $colorBadge
-
-    .sitenavi
+    li
       float: left
-      margin: 0
-      padding: 0
-      text-align: center
+      list-style-type: none
+      margin: 0 18px
+      padding-top: 7px
+      min-height: 40px
+      +fontSpecialRegular
+      font-size: $fontSizeTitle
 
-      li
-        float: left
-        list-style-type: none
-        margin: 0 18px
-        padding-top: 7px
-        min-height: 40px
-        @include fontSpecialRegular
-        font-size: $fontSizeTitle
-
-        &:hover
-          border-bottom: 3px solid $colorFontGreyDark
-          &.spriteowl
-            border-color: $colorSpriteowlLight
-            a
-              color: $colorSpriteowlLight
-          &.cssowl
-            border-color: $colorCssowlLight
-            a
-              color: $colorCssowlLight
-        &.active
-          border-bottom: 3px solid $colorFontGreyDark
+      &:hover
+        border-bottom: 3px solid $colorFontGreyDark
+        &.spriteowl
+          border-color: $colorSpriteowlLight
           a
-            color: $colorFontGreyDark
+            color: $colorSpriteowlLight
+        &.cssowl
+          border-color: $colorCssowlLight
+          a
+            color: $colorCssowlLight
+      &.active
+        border-bottom: 3px solid $colorFontGreyDark
         a
           color: $colorFontGreyDark
-          text-decoration: none
-          > .home
-            @include sprite-icon-home-replace-inline(-4px)
+      a
+        color: $colorFontGreyDark
+        text-decoration: none
+        > .home
+          +sprite-icon-home-replace-inline(-4px)
 
-    .madeby
-      color: $colorFontGreyDark
-      padding-top: 6px
-      line-height: 25px
-      float: right
-      > .wjds
-        margin-left: 5px
-        @include sprite-graphic-wjds-replace-inline(-5px)
+  .madeby
+    color: $colorFontGreyDark
+    padding-top: 6px
+    line-height: 25px
+    float: right
+    > .wjds
+      margin-left: 5px
+      +sprite-graphic-wjds-replace-inline(-5px)
+
+// --- header -------------------------------------------------------------------------------------
+
+#header
+  background: $urlBgImgLight
 
   > .head
     height: 120px
@@ -59,7 +59,7 @@ header
     .logo
       font-size: $fontSizeBase
       padding-top: 33px
-      @include sprite-logo-owlstars-before-absolute()
+      +sprite-logo-owlstars-before-absolute()
       text-decoration: none
       color: $colorFontDefault
       h1
@@ -68,6 +68,8 @@ header
         color: $colorFontGreyDark
         margin: -8px 0 0 120px
         font-size: $fontSizeSubTitle
+
+// --- cinema -------------------------------------------------------------------------------------
 
 #cinema
   width: 100%
@@ -78,7 +80,7 @@ header
   .subtitle
     margin-top: 50px
     margin-bottom: 10px
-    @include fontSpecialRegular
+    +fontSpecialRegular
     font-size: $fontSizeBig
     color: $colorFontWhite
 
@@ -93,6 +95,8 @@ header
 
     .title
       margin-top: 0
+
+// --- main ---------------------------------------------------------------------------------------
 
 #main
   position: relative
@@ -121,14 +125,14 @@ header
         margin-bottom: 40px
         background: $colorBgLight
         width: 100%
-        @include fontSpecialRegular
+        +fontSpecialRegular
         +border-radius($cornerRaduis)
 
         &.spriteowl
           margin-top: -150px
           > .head
             > .logo
-              @include sprite-logo-spriteowl-before-absolute-inside(top, center, -75px, 38px)
+              +sprite-logo-spriteowl-before-absolute-inside(top, center, -75px, 38px)
               h2
                 padding: 60px 0 0 100px
               h3
@@ -138,7 +142,7 @@ header
             background: $colorSpriteowlLight
           > .features
             .check
-              @include sprite-icon-checkSprite-before-absolute-outside(top,left, -7px, 23px)
+              +sprite-icon-checkSprite-before-absolute-outside(top,left, -7px, 23px)
           > .btnarea
             > .btn
               color: $colorFontSpriteowl
@@ -151,7 +155,7 @@ header
         &.cssowl
           > .head
             > .logo
-              @include sprite-logo-cssowl-before-absolute-inside(top, center, -50px, 38px)
+              +sprite-logo-cssowl-before-absolute-inside(top, center, -50px, 38px)
               h2
                 padding: 60px 0 0 110px
               h3
@@ -161,7 +165,7 @@ header
             background: $colorCssowlLight
           > .features
             .check
-              @include sprite-icon-checkCss-before-absolute-outside(top,left, -7px, 23px)
+              +sprite-icon-checkCss-before-absolute-outside(top,left, -7px, 23px)
           > .btnarea
             > .btn
               color: $colorFontCssowl
@@ -197,9 +201,8 @@ header
             font-size: $fontSizeTitle
 
         > .features
-          //padding: 3% 10% 3% 15%
           font-size: $fontSizeTitle
-          //@include fontDefaultBold
+
           ul
             margin: 0 20px 0 50px
             padding: 0
@@ -239,7 +242,7 @@ header
           margin-bottom: 30px
 
         .button
-          @include fontSpecialRegular
+          +fontSpecialRegular
           display: inline
           cursor: pointer
           padding: 10px 20px
@@ -270,7 +273,9 @@ header
       .teaserImg
         text-align: center
 
-footer
+// --- footer -------------------------------------------------------------------------------------
+
+#footer
   background: $colorBadge
   color: $colorFontGreyDark
 
@@ -304,7 +309,7 @@ footer
     > .title
       margin-top: 10px
       margin-bottom: 10px
-      @include fontSpecialRegular
+      +fontSpecialRegular
       font-size: $fontSizeBig
 
   .info
@@ -323,9 +328,9 @@ footer
       margin-bottom: 40px
       > .wjds
         margin-left: 5px
-        @include sprite-graphic-wjds-replace-inline(-5px)
+        +sprite-graphic-wjds-replace-inline(-5px)
 
-// --- Media --------------------------------------------------------------------------------------
+// --- media --------------------------------------------------------------------------------------
 
 @media (min-width: $screen-tablet)
 
