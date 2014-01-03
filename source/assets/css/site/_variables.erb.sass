@@ -36,13 +36,8 @@ $cornerRaduis       : 5px
 
 // --- images ---
 
-$sprite             : url("/assets/img/site/sprite.png")
-$urlBgImgLight      : url('/assets/img/site/bg.gif')
-$urlBgImgDark       : url('/assets/img/site/bgdark.gif')
-$urlBgCinema        : url('/assets/img/cinema/bgsites.png')
-$urlBgCinemaBig     : url('/assets/img/cinema/bghome.png')
-
-// --- animation ---
-
-$transitionSpeed    : 0.1s
-$transitionStyle    : color $transitionSpeed linear
+$sprite             : url("<%= image_path 'site/sprite.png'%>")
+$urlBgImgLight      : url("<%= image_path 'site/bg.gif'%>")
+$urlBgImgDark       : url("<%= image_path 'site/bgdark.gif'%>")
+$urlBgCinema        : url("<%= image_path 'cinema/bgsites.png'%>")
+$urlBgCinemaBig     : url("<%= image_path 'cinema/bghome.png'%>")
