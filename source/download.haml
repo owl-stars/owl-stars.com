@@ -44,6 +44,7 @@ no_sitemap: true
             %br
             The place of performance and the venue for the settlement of any disputes concerning this agreement shall be Munich, Germany - as far as legally permissible.
             %br
+            %br
 
       .row
         .col-xs-12
@@ -58,9 +59,6 @@ no_sitemap: true
             .downloadinfo
               {{ product.name }} {% if file.filesize %} / ({{ file.filesize}}) {% endif %}
 
-            {% endfor %}
-            {% endfor %}
-
             .downloadproblem
               <strong>Trouble downloading?</strong> Right click the link above and 'Save File As...' or 'Save Target As...' or try a different browser like Firefox, Chrome, or Safari.
 
@@ -68,3 +66,6 @@ no_sitemap: true
             .downloadlinks
               <strong>How to install Spriteowl? Check out the #{link_to 'installation guide', 'http://spriteowl.owl-stars.com/installation-faq.html'}</strong>.
             {% endif %}
+
+            {% endfor %}
+            {% endfor %}
