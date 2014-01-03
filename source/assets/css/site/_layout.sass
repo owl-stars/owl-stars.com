@@ -226,7 +226,7 @@ header
 
       .agbbox
         height: 300px
-        overflow-y: auto
+        overflow-y: scroll
         padding: 20px 30px
         background: $colorBgLight
         +border-radius($cornerRaduis)
@@ -261,6 +261,14 @@ header
         .downloadproblem
           color: $colorFontGrey
           margin: 20px 0 30px
+
+        .downloadlinks
+          display: inline-block
+          text-align: center
+          margin-top: 50px
+          background: $colorBgLight
+          +border-radius($cornerRaduis)
+          padding: 10px 20px
 
 
     &.about
