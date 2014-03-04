@@ -1,6 +1,7 @@
 ---
 debug: true
 name: Owl-Stars
-description: With our Owl-Stars products series we improve the workflow between designers and developers.
-version: 0.2.5
+description: With our Owl-Stars products series we improve the workflow between designers
+  and developers.
+version: 1.0.0
 ga_account: UA-23550216-5
