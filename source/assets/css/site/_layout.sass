@@ -37,7 +37,8 @@
         color: $colorFontGreyDark
         text-decoration: none
         > .home
-          +sprite-icon-home-replace-inline(-4px)
+          margin-bottom: -3px
+          +cssowl-sprite-replace($sprite-icon-home)
 
   .madeby
     color: $colorFontGreyDark
@@ -46,7 +47,9 @@
     float: right
     > .wjds
       margin-left: 5px
-      +sprite-graphic-wjds-replace-inline(-5px)
+      margin-bottom: -4px
+      +cssowl-sprite-replace($sprite-graphic-wjds)
+
 
 // --- header -------------------------------------------------------------------------------------
 
@@ -59,9 +62,9 @@
     .logo
       font-size: $fontSizeBase
       padding-top: 33px
-      +sprite-logo-owlstars-before-absolute()
       text-decoration: none
       color: $colorFontDefault
+      +cssowl-sprite-before-absolute($sprite-logo-owlstars, false false false false)
       h1
         margin: 14px 0 0 90px
       h2
@@ -75,26 +78,97 @@
   width: 100%
   text-align: center
   height: 130px
+  +fontSpecialRegular
   background: $urlBgCinema top center no-repeat $colorBgDark
-
-  .subtitle
-    margin-top: 50px
-    margin-bottom: 10px
-    +fontSpecialRegular
-    font-size: $fontSizeBig
-    color: $colorFontWhite
 
   .title
     margin-top: 40px
-    font-size: $fontSizeMegaBig
+    font-size: $fontSizeBig
     color: $colorFontWhite
 
   &.home
     height: 380px
     background: $urlBgCinemaBig top center no-repeat $colorBgDark
+      
+      
+#cinemacarousel
+  width: 100%
+  height: 380px
 
-    .title
-      margin-top: 0
+  .col-xs-12
+    //margin-top: 0
+    //height: 380px
+  
+  .carousel-indicators
+    bottom: -45px
+    li
+      border-color: $colorBgDark
+      
+    .active
+      background: $colorBgDark
+      
+
+  .carousel-inner
+    .item
+      height: 380px
+      .logo
+        h2
+          margin-top: 6px
+          color: $colorFontWhite
+          padding: 0 0 0 90px
+        h3
+          margin: -30px 0 0 120px
+          width: 200px
+          text-align: left
+          font-size: $fontSizeSubTitle
+          
+      .title
+        padding-top: 90px
+        margin-bottom: 10px
+          
+      .btnarea
+        text-align: center
+        padding-top: 25px
+
+        >.btn
+          font-size: $fontSizeBig
+          text-decoration: none
+          color: $colorFontWhite
+          padding: 10px 20px
+          +border-radius($cornerRaduis)
+            
+      &.spriteowl
+        .logo
+          +cssowl-sprite-absolute-inside($sprite-logo-spriteowlSlider, top, center, -75px, 0)
+        h3
+          color: $colorFontSpriteowl
+        .btnarea
+          > .btn
+            color: $colorFontSpriteowl
+            border: 1px solid $colorSpriteowlLight
+            &:hover
+              color: $colorFontWhite
+              background: $colorSpriteowlLight
+
+      &.cssowl
+        .logo
+          +cssowl-sprite-absolute-inside($sprite-logo-cssowlSlider, top, center, -75px, 0)
+        h3
+          color: $colorFontCssowl
+        .btnarea
+          > .btn
+            color: $colorFontCssowl
+            border: 1px solid $colorCssowlLight
+            &:hover
+              color: $colorFontWhite
+              background: $colorCssowlLight
+
+      .preview
+        img
+          margin-top: 80px
+          margin-left: auto
+          margin-right: auto
+      
 
 // --- main ---------------------------------------------------------------------------------------
 
@@ -117,8 +191,17 @@
 
     &.bgdark
       background: $urlBgImgDark
+      
+    &.info
+      .intro
+        margin-top: 60px
+        margin-bottom: 60px
+        >.introTitle
+          font-size: $fontSizeBig
+      
 
     &.products
+      padding-top: 50px
       padding-bottom: 40px
 
       .product
@@ -129,20 +212,23 @@
         +border-radius($cornerRaduis)
 
         &.spriteowl
-          margin-top: -150px
           > .head
             > .logo
-              +sprite-logo-spriteowl-before-absolute-inside(top, center, -75px, 38px)
+              +cssowl-sprite-absolute-inside($sprite-logo-spriteowl, top, center, -75px, 38px)
               h2
-                padding: 60px 0 0 100px
+                margin-top: 18px
+                padding: 0 0 0 105px
               h3
                 color: $colorFontSpriteowl
-                margin: -40px 0 0 205px
+                margin: -40px 0 0 135px
+                text-align: left
+                width: 200px
+                
           > .price
             background: $colorSpriteowlLight
           > .features
             .check
-              +sprite-icon-checkSprite-before-absolute-outside(top,left, -7px, 23px)
+              +cssowl-sprite-before-absolute-outside($sprite-icon-checkSprite, top, left, -7px, 23px)
           > .btnarea
             > .btn
               color: $colorFontSpriteowl
@@ -155,17 +241,19 @@
         &.cssowl
           > .head
             > .logo
-              +sprite-logo-cssowl-before-absolute-inside(top, center, -50px, 38px)
+              +cssowl-sprite-absolute-inside($sprite-logo-cssowl, top, center, -60px, 38px)
               h2
-                padding: 60px 0 0 110px
+                padding: 0 0 0 105px
               h3
                 color: $colorFontCssowl
-                margin: -40px 0 0 215px
+                margin: -40px 0 0 135px
+                text-align: left
+                width: 200px
           > .price
             background: $colorCssowlLight
           > .features
             .check
-              +sprite-icon-checkCss-before-absolute-outside(top,left, -7px, 23px)
+              +cssowl-sprite-before-absolute-outside($sprite-icon-checkCss, top, left, -7px, 23px)
           > .btnarea
             > .btn
               color: $colorFontCssowl
@@ -186,9 +274,10 @@
               font-size: $fontSizeTitle
 
         > .info
-          min-height: 110px
+          //min-height: 90px
           padding: 30px 20px 10px
-          font-size: $fontSizeTitle
+          +fontDefaultBold
+          font-size: $fontSizeSubTitle
           text-align: center
 
         > .price
@@ -291,6 +380,9 @@
     text-align: center
     margin-bottom: 25px
 
+    form
+      margin-top: 2px
+
     input
       width: 200px
 
@@ -303,6 +395,7 @@
       border: 1px solid $colorFontGreyDark
       background: $colorBadge
       text-transform: uppercase
+      margin-top: 10px
 
       &:hover
         color: $colorFontWhite
@@ -336,7 +429,10 @@
       margin-bottom: 40px
       > .wjds
         margin-left: 5px
-        +sprite-graphic-wjds-replace-inline(-5px)
+        margin-bottom: -4px
+        //+sprite-graphic-wjds-replace-inline(-5px)
+        +cssowl-sprite-replace($sprite-graphic-wjds)
+        
 
 // --- media --------------------------------------------------------------------------------------
 
@@ -346,8 +442,6 @@
     .section
       &.products
         .product
-          &.cssowl
-            margin-top: -150px
           > .features
             min-height: 225px
 
@@ -358,8 +452,6 @@
       .title
         float: left
         margin-left: 10px
-      form
-        margin-top: 13px
 
     .info
       .twitter
@@ -367,6 +459,20 @@
 
       .madeby
         float: right
+        
+  #cinemacarousel
+    .carousel-inner
+      .item
+        .title
+          margin-bottom: 0
+
+        &.spriteowl
+          .logo
+            top: 35px
+
+        &.cssowl
+          .logo
+            top: 35px
 
 
 
@@ -382,6 +488,16 @@
           &.content
             display: inline
             padding-top: -10px
+            
+  #cinema
+    .title
+      font-size: $fontSizeMegaBig
+      
+  #cinemacarousel
+    .carousel-inner
+      .item
+        .title
+          padding-top: 80px
 
 
 
@@ -391,7 +507,7 @@
       &.products
         .product
           > .info
-            min-height: 130px
+            min-height: 80px
           > .features
             min-height: 170px
             ul

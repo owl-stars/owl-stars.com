@@ -1,12 +1,47 @@
 #cinema.home
   .container
     .row
-      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-        %p.subtitle Improve your workflow:
-        %h2.title Save time and work faster with your Owl-Stars products!
+      .col-xs-12
+        #cinemacarousel.carousel.slide{"data-ride" => "carousel"}
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#cinemacarousel"}
+            %li{"data-slide-to" => "1", "data-target" => "#cinemacarousel"}
+        
+          .carousel-inner
+            .item.active.spriteowl
+              .row
+                .col-sm-6.col-xs-12
+                  .logo
+                    %h2 Spriteowl
+                    %h3 Photoshop extension
+                  .title Export your Photoshop Sprites to PNG and CSS, LESS, SASS/SCSS or Stylus code
+                  .btnarea
+                    %a.btn{title: "Spriteowl", href: "http://spriteowl.owl-stars.com"} Find out more
+          
+                .col-sm-6.preview.hidden-xs
+                  =image_tag "cinema/spriteowl-extension-colors.png", :alt => "", :class => "img-responsive"
 
+            .item.cssowl
+              .row
+                .col-sm-6.col-xs-12
+                  .logo
+                    %h2 Cssowl
+                    %h3 Mixin library
+                  .title Cssowl is a mixin library with support for LESS, SASS/SCSS and Stylus
+                  .btnarea
+                    %a.btn{title: "Cssowl", href: "http://cssowl.owl-stars.com"} Find out more
+              
+                .col-sm-6.preview.hidden-xs
+                  =image_tag "cinema/cssowl-code.png", :alt => "", :class => "img-responsive"
 #main
-  .section.products
+  .section.info
+    .container
+      .row
+        .col-xs-12.col-md-10.col-md-offset-1.intro
+          %h2.introTitle
+            With our Owl-Stars products series we improve the workflow between designers and developers or make live easier for people who do both. 
+  
+  .section.products.bgdark
     .container
       .row
         .col-xs-12.col-sm-6
@@ -17,14 +52,14 @@
                 %h3.hidden-xs.hidden-sm Photoshop extension
             .price
               Only $
-              %span.bigPrice> 15
+              %span.bigPrice> 20
             .info
               Spriteowl is a Photoshop extension that takes over the boring part when working with sprite images and CSS.
             .features
               %ul
-                %li.check Retrieves x, y, width and height info of all sprite elements for you.
+                %li.check Retrieves x, y, width and height info of all sprite elements for you
+                %li.check Exports retina ready PNG files and all required media queries of your Photoshop sprite file
                 %li.check Supports preprocessors LESS, SASS/SCSS & Stylus
-                %li.check Works for Photoshop CS6 & CC on Mac & Windows systems
             .btnarea
               %a.btn{title: "Spriteowl", href: "http://spriteowl.owl-stars.com"} Find out more
 
@@ -47,24 +82,22 @@
               %a.btn{title: "Cssowl", href: "http://cssowl.owl-stars.com"} Find out more
 
 
-  .section.about.bgdark
+  .section.about
     .container
       .row
         .col-xs-12.col-md-8.col-md-offset-2.intro
           %h2.introTitle About Owl-Stars
 
       .row
-        .col-sm-7
+        .col-sm-6
           %p
-            With our <strong>Owl-Stars products series</strong> we improve the workflow between designers and developers or make live easier for people who do both.
-            %br
-            %br
+            The <strong>Owl-Stars product series</strong> enable you to <strong>develop websites and applications faster and easier</strong>.
             We are currently working on more cool stuff, so <strong>stay tuned and subscribe to our newsletter</strong>!
             %br
             %br
-            If you have any questions, feedback or are interested in more details about us and our Owl-Stars product series, drop us a line at #{mail_to 'support@owl-stars.com', 'support@owl-stars.com'} or visit our company site #{link_to 'www.wejustdostuff.com', 'html://www.wejustdostuff.com', :target => '_blank'}.
+            If you have any questions, feedback or are interested in more details about us and our Owl-Stars product series, drop us a line at #{mail_to 'support@owl-stars.com', 'support@owl-stars.com'} or visit our company site #{link_to 'www.wejustdostuff.com', 'http://www.wejustdostuff.com', :target => '_blank'}.
 
-        .col-sm-5
+        .col-sm-6
           .teaserImg
             =image_tag "content/tree-owl.png", :alt => ""
 
