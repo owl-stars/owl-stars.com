@@ -423,15 +423,25 @@
     .copyright
       margin-top: 20px
 
-    .madeby
+    .links
       text-align: center
       padding-top: 20px
       margin-bottom: 40px
-      > .wjds
-        margin-left: 5px
-        margin-bottom: -4px
-        //+sprite-graphic-wjds-replace-inline(-5px)
-        +cssowl-sprite-replace($sprite-graphic-wjds)
+
+      .press-kit
+        margin: 2px 15px
+        display: inline-block
+        a
+          color: $colorFontGreyDark
+          text-decoration: none
+
+      .madeby
+        display: inline-block
+        margin: 2px 15px
+        > .wjds
+          margin-left: 5px
+          margin-bottom: -4px
+          +cssowl-sprite-replace($sprite-graphic-wjds)
         
 
 // --- media --------------------------------------------------------------------------------------
@@ -445,7 +455,7 @@
           > .features
             min-height: 225px
 
-  footer
+  #footer
     .newsletter
       margin-top: 20px
 
@@ -457,8 +467,8 @@
       .twitter
         float: left
 
-      .madeby
-        float: right
+      .links
+        text-align: right
         
   #cinemacarousel
     .carousel-inner
@@ -499,7 +509,23 @@
         .title
           padding-top: 80px
           
+  // --- animation
+
+
   // --- animation 
+  .startslidemodule-in-left
+    -webkit-transform: translateX(-300px)
+    transform: translateX(-300px)
+    -webkit-animation: come-in 0.8s ease forwards 1.5s
+    animation: come-in 0.8s ease forwards 1.5s
+    opacity: 0
+
+  .startslidemodule-in-right
+    -webkit-transform: translateX(300px)
+    transform: translateX(300px)
+    -webkit-animation: come-in 0.8s ease forwards 1.5s
+    animation: come-in 0.8s ease forwards 1.5s
+    opacity: 0
 
   .slidemodule-in
     -webkit-transform: translateY(100px)

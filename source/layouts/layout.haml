@@ -43,14 +43,16 @@
               %label{for: "mc-email"}
 
         .row.info
-          .col-xs-12.col-sm-6
+          .col-xs-12.col-sm-5
             - if (page_classes == 'index')
               .twitter
                 %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "Spriteowl", :via => "Owl_Stars", :url => "http://spriteowl.owl-stars.com/"}} Tweet
             - else
               .copyright
                 Copyright © #{Time.now.year} by Owl-Stars
-          .col-xs-12.col-sm-6
+          .col-xs-12.col-sm-7.links
+            .press-kit
+              %a{title: "Owl-Stars Press kit", href: "http://www.owl-stars.com/assets/download/Owl-Stars_Press-kit.zip", target: "_blank"} Press kit
             .madeby
               Owl-Stars is made by
               %a{title: "We Just Do Stuff", href: "http://www.wejustdostuff.com", target: "_blank", class: "wjds"} We Just Do Stuff
