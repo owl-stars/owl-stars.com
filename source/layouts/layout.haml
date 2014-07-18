@@ -46,7 +46,8 @@
           .col-xs-12.col-sm-5
             - if (page_classes == 'index')
               .twitter
-                %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "Spriteowl", :via => "Owl_Stars", :url => "http://spriteowl.owl-stars.com/"}} Tweet
+                %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "The Owl-Stars products series improve the workflow between designers and developers", :via => "Owl_Stars", :url => "http://www.owl-stars.com"}} Tweet
+                %a.twitter-follow-button{href: "https://twitter.com/Owl_Stars", "data-show-count" => "false"} Follow @Owl_Stars
             - else
               .copyright
                 Copyright © #{Time.now.year} by Owl-Stars
