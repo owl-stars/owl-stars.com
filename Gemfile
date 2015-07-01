@@ -1,8 +1,7 @@
-ruby "1.9.3"
 source 'http://rubygems.org'
 
 gem "builder", "~>3.2.2"
-gem "middleman", "~>3.2.0"
+gem "middleman"
 gem "middlesite", "~>0.1.3"
 gem "middleman-deploy", "~>0.2.3"
 gem "middleman-livereload", "~>3.2.1"
