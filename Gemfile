@@ -1,13 +1,13 @@
 source 'http://rubygems.org'
 
-gem "builder", "~>3.2.2"
-gem "middleman"
-gem "middlesite", "~>0.1.3"
-gem "middleman-deploy", "~>0.2.3"
-gem "middleman-livereload", "~>3.2.1"
+gem "builder"
+gem "middleman", "~> 3.3"
+gem "middlesite"
+gem "middleman-deploy"
+gem "middleman-livereload"
 gem "middleman-imageoptim", "~> 0.1.4"
-gem "middleman-minify-html", "~>3.1.1"
-gem "middleman-favicon-maker", "~>3.5.3"
+gem "middleman-minify-html"
+gem "middleman-favicon-maker"
 gem "middleman-google-analytics", "~>0.0.3"
 
 # For faster file watcher updates on Windows:
