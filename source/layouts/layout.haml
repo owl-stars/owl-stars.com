@@ -19,7 +19,7 @@
     %link{ rel: "shortcut icon", href: "favicon.png" }
     %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", "site"
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Patua+One", "site"
     = google_analytics_tag
 
   %body{:class => page_classes}
@@ -32,31 +32,22 @@
 
     %footer#footer
       .container
-        .row
-          .col-sm-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2.newsletter
-            .title
-              Don't miss our software updates!
-            %form#mailchimpform
-              %input#mc-email{placeholder: "Your email address", type: "email"}
-              %button{type: "submit"} Subscribe
-              %br
-              %label{for: "mc-email"}
 
         .row.info
           .col-xs-12.col-sm-5
             - if (page_classes == 'index')
               .twitter
-                %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "The Owl-Stars product series improve the workflow between designers and developers", :via => "Owl_Stars", :url => "http://www.owl-stars.com"}} Tweet
+                %a{href: "https://twitter.com/share", class: "twitter-share-button", data: {:count => "horizontal", :text => "The Owl-Stars product series improve the workflow between designers and developers", :via => "Owl_Stars", :url => data.site.url}} Tweet
                 %a.twitter-follow-button{href: "https://twitter.com/Owl_Stars", "data-show-count" => "false"} Follow @Owl_Stars
             - else
               .copyright
                 Copyright © #{Time.now.year} by Owl-Stars
           .col-xs-12.col-sm-7.links
             .press-kit
-              %a{title: "Owl-Stars Press kit", href: "http://www.owl-stars.com/assets/download/Owl-Stars_Press-kit.zip", target: "_blank"} Press kit
+              %a{title: "Owl-Stars Press kit", href: "/assets/download/Owl-Stars_Press-kit.zip", target: "_blank"} Press kit
             .madeby
               Owl-Stars is made by
-              %a{title: "We Just Do Stuff", href: "http://www.wejustdostuff.com", target: "_blank", class: "wjds"} We Just Do Stuff
+              %a{title: "We Just Do Stuff", href: "https://www.wejustdostuff.com", target: "_blank", class: "wjds"} We Just Do Stuff
 
 
     = javascript_include_tag  "main"
